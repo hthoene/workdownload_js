@@ -1,0 +1,362 @@
+<template>
+  <section id="home">
+    <div class="row home-holder mobile-column">
+      <div class="column row-equal">
+        <img
+          src="../../assets/sharing-content.svg"
+          alt="sharing-content-image"
+          class="head-image hide-desktop"
+        />
+        <div class="spacer-l hide-desktop"></div>
+        <h1 class="home-title">Deliver files to your clients</h1>
+        <div class="spacer-s"></div>
+        <p class="mobile-justify" id="description">
+          Sharing files with clients has never been easier. Upload files and
+          share a link, we'll do the rest. You can start for free today!
+        </p>
+        <div class="spacer-l"></div>
+        <div class="row">
+          <CustomButton mode="default" @click="getStarted"
+            ><span>Get Started</span></CustomButton
+          >
+          <div class="spacer-m"></div>
+          <a href="#features">
+            <CustomButton mode="more"><span>Learn more</span></CustomButton>
+          </a>
+        </div>
+        <div class="spacer-xl mobile-l"></div>
+        <div class="beta-notification">
+          <span
+            >work.download is still in development and may be missing some
+            features. Because of that we are in closed beta and you can only get
+            started with a beta code. If you would like to try out the platform
+            you can still <a href="contact">contact us.</a></span
+          >
+        </div>
+      </div>
+      <div class="column row-equal">
+        <img
+          src="../../assets/sharing-content.svg"
+          class="head-image hide-mobile"
+          alt="sharing-content"
+        />
+      </div>
+    </div>
+    <div class="bottom-spacing hide-mobile"></div>
+  </section>
+  <section id="features">
+    <h1>Features</h1>
+    <p>Explore our unique features</p>
+    <div class="spacer-l"></div>
+    <div class="row full-width space-between mobile-column">
+      <div class="column image-card center equal">
+        <img src="../../assets/share.svg" alt="share" class="icon-card" />
+        <div class="spacer-m"></div>
+        <h2 class="text-center">Easy Data Sharing</h2>
+        <div class="spacer-s"></div>
+        <p class="text-center">
+          Everything is design to be as simple as possible
+        </p>
+      </div>
+      <div class="spacer-cards"></div>
+      <div class="column image-card center equal">
+        <img
+          src="../../assets/cyber-security.svg"
+          alt="cyber-security"
+          class="icon-card"
+        />
+        <div class="spacer-m"></div>
+        <h2 class="text-center">Advanced Encryption</h2>
+        <div class="spacer-s"></div>
+        <p class="text-center">
+          We use modern AES 256 encryption to secure your files
+        </p>
+      </div>
+      <div class="spacer-cards"></div>
+      <div class="column image-card center equal">
+        <img src="../../assets/email.svg" alt="email" class="icon-card" />
+        <div class="spacer-m"></div>
+        <h2 class="text-center">Email Notifications</h2>
+        <div class="spacer-s"></div>
+        <p class="text-center">Notify your clients with emails about changes</p>
+      </div>
+    </div>
+    <div class="spacer-xl hide-mobile"></div>
+    <div class="row full-width space-between mobile-column">
+      <div class="column image-card center equal">
+        <img
+          src="../../assets/megaphone.svg"
+          alt="megaphone"
+          class="icon-card"
+        />
+        <div class="spacer-m"></div>
+        <h2 class="text-center">No Ads</h2>
+        <div class="spacer-s"></div>
+        <p class="text-center">
+          There are no ads, this prevents downloading malware
+        </p>
+      </div>
+      <div class="spacer-cards"></div>
+      <div class="column image-card center equal">
+        <img src="../../assets/open-box.svg" class="icon-card" alt="open-box" />
+        <div class="spacer-m"></div>
+        <h2 class="text-center">Long Storage Time</h2>
+        <div class="spacer-s"></div>
+        <p class="text-center">
+          Your clients files are always available to download
+        </p>
+      </div>
+      <div class="spacer-cards"></div>
+      <div class="column image-card center equal">
+        <img
+          src="../../assets/customer-support.svg"
+          alt="customer-support"
+          class="icon-card"
+        />
+        <div class="spacer-m"></div>
+        <h2 class="text-center">Support</h2>
+        <div class="spacer-s"></div>
+        <p class="text-center">
+          We are always here to help you and answer your questions
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="spacer-xl"></div>
+    </div>
+  </section>
+
+  <section id="section3">
+    <div class="spacer-xl"></div>
+    <h1>Simple Interface</h1>
+    <p>We designed our platform to be easy to use.</p>
+    <div class="spacer-l"></div>
+    <div></div>
+    <div class="row center screenshot-holder mobile-column">
+      <img
+        src="../../assets/work_download_dashboard.png"
+        alt="work_download_dashboard_image"
+        class="image-border equal"
+      />
+      <div class="spacer-xxl hide-mobile"></div>
+      <img
+        class="image-border equal hide-tablet"
+        alt="work_download_password_image"
+        src="../../assets/work_download_password.png"
+      />
+    </div>
+  </section>
+</template>
+
+<script>
+import CustomButton from "../layout/CustomButton.vue";
+
+export default {
+  components: { CustomButton },
+  methods: {
+    getStarted() {
+      this.$router.replace("register");
+    },
+  },
+};
+</script>
+
+<style scoped>
+.home-title {
+  font-size: 2.6rem;
+}
+
+#description {
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+}
+
+.beta-notification {
+  border-radius: 0.4rem;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: rgba(95, 95, 95, 0.219);
+  background-color: rgb(255, 255, 255);
+  padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+  width: fit-content;
+  font-size: 0.9rem;
+  color: rgb(134, 134, 134);
+}
+
+.beta-notification:hover {
+  background-color: rgb(249, 249, 249);
+}
+
+.youtube {
+  border-radius: 1rem;
+}
+
+.image-border {
+  width: 30rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 1px 1px rgba(158, 159, 160, 0.048);
+}
+
+.home-holder {
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-card {
+  width: 4rem;
+  height: 4rem;
+}
+
+section {
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+
+  padding: 8rem 20% 8rem 20%;
+}
+
+.text-center {
+  text-align: center;
+  width: 100%;
+}
+
+.bottom-spacing {
+  height: 10rem;
+}
+
+.spacer-cards {
+  flex: 0.2;
+}
+
+.info-image {
+  height: 15rem;
+}
+
+#home {
+  background-image: url(../../assets/background_curved.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  background-position-y: bottom;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+
+.head-image {
+  align-self: flex-end;
+  width: 20rem;
+  height: 20rem;
+}
+
+.row-equal {
+  flex: 1;
+  justify-content: center;
+}
+
+#features {
+  background-color: rgb(254, 254, 255);
+  height: fit-content;
+}
+
+#section3 {
+  background-image: url(../../assets/background_curved2.svg);
+
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.image-card {
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: rgb(228, 228, 228);
+  border-radius: 0.4rem;
+  padding: 2rem;
+  background-color: white;
+}
+
+.hide-desktop {
+  display: none;
+}
+
+.image-card:hover {
+  background-color: rgb(249, 249, 249);
+}
+
+.image-border {
+  max-width: 40rem;
+}
+
+@media only screen and (max-width: 1080px) {
+  .head-image {
+    align-self: flex-start;
+    width: 20%;
+  }
+
+  .mobile-center {
+    text-align: center;
+    align-self: center;
+  }
+
+  .mobile-justify {
+    text-align: justify;
+    align-self: center;
+  }
+
+  .mobile-column {
+    flex-direction: column;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .hide-desktop {
+    display: flex;
+  }
+  .image-card {
+    margin-bottom: 2rem;
+  }
+
+  .image-border {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  .hide-tablet {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .head-image {
+    align-self: center;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .mobile-l {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .home-title {
+    font-size: 1.5rem;
+  }
+
+  #description {
+    line-height: 1.4rem;
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 8rem 2.4rem 8rem 2.4rem;
+  }
+}
+</style>
