@@ -1,4 +1,4 @@
+# WorkDownload
+WorkDownload Personal Project Source Code of Backend by Hannes Thöne
 
-WorkDownload Personal Project Source Code of Frontend by Hannes Thöne
-
-Backend: https://github.com/hthoene/WorkDownload
+Backend: [https://github.com/hthoene/workdownload_js](https://github.com/hthoene/WorkDownload)
